@@ -1,0 +1,9 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "typescript": "4.7.2"
+  }
+}
