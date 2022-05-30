@@ -1,4 +1,4 @@
-import { Application } from "express";
+import { Application, json, urlencoded } from "express";
 import { IServerProvider } from "../IServerProvider";
 
 class ServerProvider implements IServerProvider {
@@ -13,7 +13,13 @@ class ServerProvider implements IServerProvider {
     return this.server;
   };
 
+  private middlewares(): void {
+    this.server.use(json());
+    this.server.use(urlencoded({ extended: true }));
+  };
+
   private settings(): void {
+    this.middlewares();
     this.getServer();
   };
 
