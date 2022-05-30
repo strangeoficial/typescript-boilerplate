@@ -1,5 +1,6 @@
 import { Application, json, urlencoded } from "express";
 import { IServerProvider } from "../IServerProvider";
+import { CreateRoutes } from "../../routes";
 
 class ServerProvider implements IServerProvider {
   constructor(
@@ -20,6 +21,7 @@ class ServerProvider implements IServerProvider {
 
   private settings(): void {
     this.middlewares();
+    CreateRoutes(this.server);
     this.getServer();
   };
 
