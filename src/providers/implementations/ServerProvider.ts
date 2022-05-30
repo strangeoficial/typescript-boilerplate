@@ -1,6 +1,6 @@
 import { Application, json, urlencoded } from "express";
-import { IServerProvider } from "../IServerProvider";
-import { CreateRoutes } from "../../routes";
+import { IServerProvider } from "@provider/IServerProvider";
+import { CreateRoutes } from "@route/index";
 
 class ServerProvider implements IServerProvider {
   constructor(

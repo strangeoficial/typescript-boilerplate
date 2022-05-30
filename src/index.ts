@@ -1,3 +1,3 @@
-import { server } from "./configs/server";
+import { server } from "@config/server";
 
 server.start();

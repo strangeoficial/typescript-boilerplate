@@ -1,5 +1,5 @@
 import { Application } from "express";
-import { main } from "./public.routes";
+import { main } from "@route/public.routes";
 
 export function CreateRoutes(app: Application): void {
   try {
